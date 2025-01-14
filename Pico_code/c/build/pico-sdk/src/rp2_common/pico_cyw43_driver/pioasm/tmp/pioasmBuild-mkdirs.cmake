@@ -6,22 +6,22 @@ cmake_minimum_required(VERSION ${CMAKE_VERSION}) # this file comes with cmake
 # If CMAKE_DISABLE_SOURCE_CHANGES is set to true and the source directory is an
 # existing directory in our source tree, calling file(MAKE_DIRECTORY) on it
 # would cause a fatal error, even though it would be a no-op.
-if(NOT EXISTS "/home/Misha/pico_sdk/pico-sdk/tools/pioasm")
-  file(MAKE_DIRECTORY "/home/Misha/pico_sdk/pico-sdk/tools/pioasm")
+if(NOT EXISTS "/Users/macuser1/Pico/pico-sdk/tools/pioasm")
+  file(MAKE_DIRECTORY "/Users/macuser1/Pico/pico-sdk/tools/pioasm")
 endif()
 file(MAKE_DIRECTORY
-  "/home/Misha/display_1.8/Pico_code/c/build/pioasm"
-  "/home/Misha/display_1.8/Pico_code/c/build/pioasm-install"
-  "/home/Misha/display_1.8/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/tmp"
-  "/home/Misha/display_1.8/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp"
-  "/home/Misha/display_1.8/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src"
-  "/home/Misha/display_1.8/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp"
+  "/Users/macuser1/Pico_code/Pico_code/c/build/pioasm"
+  "/Users/macuser1/Pico_code/Pico_code/c/build/pioasm-install"
+  "/Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/tmp"
+  "/Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp"
+  "/Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src"
+  "/Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/Misha/display_1.8/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/Misha/display_1.8/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp${cfgdir}") # cfgdir has leading slash
 endif()

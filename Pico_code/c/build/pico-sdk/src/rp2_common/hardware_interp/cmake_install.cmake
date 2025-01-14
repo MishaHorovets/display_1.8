@@ -1,4 +1,4 @@
-# Install script for directory: /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_interp
+# Install script for directory: /Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_interp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,12 +34,12 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/arm-none-eabi-objdump")
+  set(CMAKE_OBJDUMP "/usr/local/bin/arm-none-eabi-objdump")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/Misha/display_1.8/Pico_code/c/build/pico-sdk/src/rp2_common/hardware_interp/install_local_manifest.txt"
+  file(WRITE "/Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/src/rp2_common/hardware_interp/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

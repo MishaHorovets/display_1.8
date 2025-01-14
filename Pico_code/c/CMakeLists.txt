@@ -1,18 +1,15 @@
 cmake_minimum_required(VERSION 3.12)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-set(PICO_SDK_PATH "~/pico_sdk/pico-sdk")
 set(PICO_BOARD pico_w)
-# set(PICO_BOARD pico2)
 include(pico_sdk_import.cmake)
+project(Pico_ePaper_Code)
 pico_sdk_init()
 
 # add compiled files subdirectory
 add_subdirectory(lib/Config)
 add_subdirectory(lib/LCD)
 add_subdirectory(lib/GUI)
-add_subdirectory(lib/Fonts)
 
-include_directories(./lib/Fonts)
 include_directories(./lib/Config)
 include_directories(./lib/GUI)
 include_directories(./lib/LCD)

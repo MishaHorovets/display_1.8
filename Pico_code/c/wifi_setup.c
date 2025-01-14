@@ -1,23 +1,10 @@
 #include "wifi_setup.h"
-#include "lwipopts.h"
-#include "main.c"
-#include "pico/cyw43_arch.h"
-#include <cyw43_country.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
-#include "GUI_Paint.h"
-#include "LCD_1in8.h"
-#include "anime/photo.c"
-#include "cJSON.c"
-#include "cJSON.h"
-#include "hardware/flash.h"
-#include "hardware/gpio.h"
-#include "hardware/sync.h"
-#include "hardware/uart.h"
-#include "lib/Fonts/font12.c"
-#include "wifi_setup.c"
+#include "lwip/apps/http_client.h"
+#include "lwipopts.h"
+#include "pico/cyw43_arch.h"
+#include "pico/stdlib.h"
+#include <cyw43_country.h>
 #include <hardware/rtc.h>
 #include <lwip/tcp.h>
 #include <pico/stdio.h>
@@ -25,11 +12,14 @@
 #include <pico/stdlib.h>
 #include <pico/time.h>
 #include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 char ssid[64] = {0};
 char pass[64] = {0};
 const uint32_t country = CYW43_COUNTRY_WORLDWIDE;
 uint32_t auth = CYW43_AUTH_WPA2_MIXED_PSK;
+char myBuff[2000];
 err_t body(void *arg, struct altcp_pcb *conn, struct pbuf *p, err_t err) {
   printf("body\n");
   pbuf_copy_partial(p, myBuff, p->tot_len, 0);

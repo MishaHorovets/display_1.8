@@ -1,4 +1,4 @@
-// Padded and checksummed version of: /home/Misha/display_1.8/Pico_code/c/build/pico-sdk/src/rp2040/boot_stage2/bs2_default.bin
+// Padded and checksummed version of: /Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/src/rp2040/boot_stage2/bs2_default.bin
 
 .cpu cortex-m0plus
 .thumb

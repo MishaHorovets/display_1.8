@@ -1,13 +1,13 @@
 # Target labels
  pioasmBuild
 # Source files and their labels
-/home/Misha/display_1.8/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild
-/home/Misha/display_1.8/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild.rule
-/home/Misha/display_1.8/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild-complete.rule
-/home/Misha/display_1.8/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-build.rule
-/home/Misha/display_1.8/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-configure.rule
-/home/Misha/display_1.8/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-download.rule
-/home/Misha/display_1.8/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-install.rule
-/home/Misha/display_1.8/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-mkdir.rule
-/home/Misha/display_1.8/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-patch.rule
-/home/Misha/display_1.8/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-update.rule
+/Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild
+/Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild.rule
+/Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild-complete.rule
+/Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-build.rule
+/Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-configure.rule
+/Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-download.rule
+/Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-install.rule
+/Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-mkdir.rule
+/Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-patch.rule
+/Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-update.rule

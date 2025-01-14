@@ -1,3 +1,8 @@
+
+#include "lwip/apps/http_client.h"
+#include "pico/cyw43_arch.h"
+#include "pico/stdlib.h"
+#include <stdio.h>
 // initialization of wifi module
 // connects based on the passed country (WorldWide is prefferable)
 int setup(uint32_t country, const char *ssid, const char *pass, uint32_t auth,

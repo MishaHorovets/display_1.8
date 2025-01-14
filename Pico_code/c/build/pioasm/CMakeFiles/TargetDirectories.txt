@@ -1,7 +1,7 @@
-/home/Misha/display_1.8/Pico_code/c/build/pioasm/CMakeFiles/pioasm.dir
-/home/Misha/display_1.8/Pico_code/c/build/pioasm/CMakeFiles/edit_cache.dir
-/home/Misha/display_1.8/Pico_code/c/build/pioasm/CMakeFiles/rebuild_cache.dir
-/home/Misha/display_1.8/Pico_code/c/build/pioasm/CMakeFiles/list_install_components.dir
-/home/Misha/display_1.8/Pico_code/c/build/pioasm/CMakeFiles/install.dir
-/home/Misha/display_1.8/Pico_code/c/build/pioasm/CMakeFiles/install/local.dir
-/home/Misha/display_1.8/Pico_code/c/build/pioasm/CMakeFiles/install/strip.dir
+/Users/macuser1/Pico_code/Pico_code/c/build/pioasm/CMakeFiles/pioasm.dir
+/Users/macuser1/Pico_code/Pico_code/c/build/pioasm/CMakeFiles/edit_cache.dir
+/Users/macuser1/Pico_code/Pico_code/c/build/pioasm/CMakeFiles/rebuild_cache.dir
+/Users/macuser1/Pico_code/Pico_code/c/build/pioasm/CMakeFiles/list_install_components.dir
+/Users/macuser1/Pico_code/Pico_code/c/build/pioasm/CMakeFiles/install.dir
+/Users/macuser1/Pico_code/Pico_code/c/build/pioasm/CMakeFiles/install/local.dir
+/Users/macuser1/Pico_code/Pico_code/c/build/pioasm/CMakeFiles/install/strip.dir

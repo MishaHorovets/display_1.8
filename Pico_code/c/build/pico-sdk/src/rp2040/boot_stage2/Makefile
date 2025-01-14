@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E rm -f
+RM = /usr/local/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/Misha/display_1.8/Pico_code/c
+CMAKE_SOURCE_DIR = /Users/macuser1/Pico_code/Pico_code/c
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/Misha/display_1.8/Pico_code/c/build
+CMAKE_BINARY_DIR = /Users/macuser1/Pico_code/Pico_code/c/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/Misha/display_1.8/Pico_code/c/build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/CMakeFiles /home/Misha/display_1.8/Pico_code/c/build/pico-sdk/src/rp2040/boot_stage2//CMakeFiles/progress.marks
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/CMakeFiles 0
+	cd /Users/macuser1/Pico_code/Pico_code/c/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/macuser1/Pico_code/Pico_code/c/build/CMakeFiles /Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/src/rp2040/boot_stage2//CMakeFiles/progress.marks
+	cd /Users/macuser1/Pico_code/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macuser1/Pico_code/Pico_code/c/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/clean
+	cd /Users/macuser1/Pico_code/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/preinstall
+	cd /Users/macuser1/Pico_code/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/preinstall
+	cd /Users/macuser1/Pico_code/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/macuser1/Pico_code/Pico_code/c/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/rule:
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/rule
+	cd /Users/macuser1/Pico_code/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/rule
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/rule
 
 # Convenience name for target.
@@ -127,12 +127,12 @@ bs2_default: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/rule
 
 # fast build rule for target.
 bs2_default/fast:
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build
+	cd /Users/macuser1/Pico_code/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build
 .PHONY : bs2_default/fast
 
 # Convenience name for target.
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/rule:
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/rule
+	cd /Users/macuser1/Pico_code/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/rule
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/rule
 
 # Convenience name for target.
@@ -141,38 +141,30 @@ bs2_default_bin: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/
 
 # fast build rule for target.
 bs2_default_bin/fast:
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build
+	cd /Users/macuser1/Pico_code/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build
 .PHONY : bs2_default_bin/fast
 
 # Convenience name for target.
-pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/rule:
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/rule
-.PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/rule
+pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/rule:
+	cd /Users/macuser1/Pico_code/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/rule
+.PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/rule
 
 # Convenience name for target.
-bs2_default_library: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/rule
-.PHONY : bs2_default_library
+bs2_default_padded_checksummed_asm: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/rule
+.PHONY : bs2_default_padded_checksummed_asm
 
 # fast build rule for target.
-bs2_default_library/fast:
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build
-.PHONY : bs2_default_library/fast
+bs2_default_padded_checksummed_asm/fast:
+	cd /Users/macuser1/Pico_code/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build
+.PHONY : bs2_default_padded_checksummed_asm/fast
 
-bs2_default_padded_checksummed.o: bs2_default_padded_checksummed.S.o
-.PHONY : bs2_default_padded_checksummed.o
-
-# target to build an object file
-bs2_default_padded_checksummed.S.o:
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/bs2_default_padded_checksummed.S.o
-.PHONY : bs2_default_padded_checksummed.S.o
-
-compile_time_choice.o: compile_time_choice.S.o
-.PHONY : compile_time_choice.o
+compile_time_choice.obj: compile_time_choice.S.obj
+.PHONY : compile_time_choice.obj
 
 # target to build an object file
-compile_time_choice.S.o:
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.o
-.PHONY : compile_time_choice.S.o
+compile_time_choice.S.obj:
+	cd /Users/macuser1/Pico_code/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.obj
+.PHONY : compile_time_choice.S.obj
 
 # Help Target
 help:
@@ -183,10 +175,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bs2_default_bin"
+	@echo "... bs2_default_padded_checksummed_asm"
 	@echo "... bs2_default"
-	@echo "... bs2_default_library"
-	@echo "... bs2_default_padded_checksummed.o"
-	@echo "... compile_time_choice.o"
+	@echo "... compile_time_choice.obj"
 .PHONY : help
 
 
@@ -198,6 +189,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/macuser1/Pico_code/Pico_code/c/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

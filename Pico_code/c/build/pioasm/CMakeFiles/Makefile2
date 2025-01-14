@@ -45,19 +45,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E rm -f
+RM = /usr/local/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/Misha/pico_sdk/pico-sdk/tools/pioasm
+CMAKE_SOURCE_DIR = /Users/macuser1/Pico/pico-sdk/tools/pioasm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/Misha/display_1.8/Pico_code/c/build/pioasm
+CMAKE_BINARY_DIR = /Users/macuser1/Pico_code/Pico_code/c/build/pioasm
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -85,14 +85,14 @@ clean: CMakeFiles/pioasm.dir/clean
 CMakeFiles/pioasm.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pioasm.dir/build.make CMakeFiles/pioasm.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pioasm.dir/build.make CMakeFiles/pioasm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Misha/display_1.8/Pico_code/c/build/pioasm/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target pioasm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macuser1/Pico_code/Pico_code/c/build/pioasm/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target pioasm"
 .PHONY : CMakeFiles/pioasm.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pioasm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/pioasm/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macuser1/Pico_code/Pico_code/c/build/pioasm/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pioasm.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/pioasm/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macuser1/Pico_code/Pico_code/c/build/pioasm/CMakeFiles 0
 .PHONY : CMakeFiles/pioasm.dir/rule
 
 # Convenience name for target.
@@ -102,7 +102,6 @@ pioasm: CMakeFiles/pioasm.dir/rule
 # codegen rule for target.
 CMakeFiles/pioasm.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pioasm.dir/build.make CMakeFiles/pioasm.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Misha/display_1.8/Pico_code/c/build/pioasm/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Finished codegen for target pioasm"
 .PHONY : CMakeFiles/pioasm.dir/codegen
 
 # clean rule for target.

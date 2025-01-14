@@ -1,6 +1,6 @@
 ﻿#include "GUI_Paint.h"
 #include "LCD_1in8.h"
-/*#include "anime/photo.c"*/
+#include "anime/photo.c"
 #include "cJSON.c"
 #include "cJSON.h"
 #include "hardware/flash.h"
@@ -160,7 +160,6 @@ void get_curr_time(char *curr_time) {
 /*                arr_22, arr_23, arr_24, arr_25, arr_26, arr_27};*/
 
 char curr_time[100];
-char myBuff[2000];
 char timeBuff[2000];
 int main(void) {
   stdio_init_all();
