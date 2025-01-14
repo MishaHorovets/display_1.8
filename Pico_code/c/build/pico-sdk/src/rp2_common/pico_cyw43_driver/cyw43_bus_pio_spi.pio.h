@@ -34,7 +34,7 @@ static const struct pio_program spi_gap0_sample1_program = {
     .instructions = spi_gap0_sample1_program_instructions,
     .length = 5,
     .origin = -1,
-    .pio_version = 0,
+    .pio_version = spi_gap0_sample1_pio_version,
 #if PICO_PIO_VERSION > 0
     .used_gpio_ranges = 0x0
 #endif
@@ -75,7 +75,7 @@ static const struct pio_program spi_gap01_sample0_program = {
     .instructions = spi_gap01_sample0_program_instructions,
     .length = 6,
     .origin = -1,
-    .pio_version = 0,
+    .pio_version = spi_gap01_sample0_pio_version,
 #if PICO_PIO_VERSION > 0
     .used_gpio_ranges = 0x0
 #endif
@@ -117,7 +117,7 @@ static const struct pio_program spi_gap010_sample1_program = {
     .instructions = spi_gap010_sample1_program_instructions,
     .length = 7,
     .origin = -1,
-    .pio_version = 0,
+    .pio_version = spi_gap010_sample1_pio_version,
 #if PICO_PIO_VERSION > 0
     .used_gpio_ranges = 0x0
 #endif
@@ -157,7 +157,7 @@ static const struct pio_program spi_gap0_sample1_regular_program = {
     .instructions = spi_gap0_sample1_regular_program_instructions,
     .length = 5,
     .origin = -1,
-    .pio_version = 0,
+    .pio_version = spi_gap0_sample1_regular_pio_version,
 #if PICO_PIO_VERSION > 0
     .used_gpio_ranges = 0x0
 #endif

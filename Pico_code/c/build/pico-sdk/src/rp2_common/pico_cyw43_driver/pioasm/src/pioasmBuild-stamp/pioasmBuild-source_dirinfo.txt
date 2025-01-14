@@ -4,6 +4,6 @@
 
 method=source_dir
 command=
-source_dir=/Users/macuser1/Pico/pico-sdk/tools/pioasm
+source_dir=/home/Misha/pico_sdk/pico-sdk/tools/pioasm
 work_dir=
 
