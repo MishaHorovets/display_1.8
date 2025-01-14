@@ -1,0 +1,5 @@
+/Users/macuser1/Pico_code/Pico_code/c/build/pioasm-install/pioasm/pioasm
+/Users/macuser1/Pico_code/Pico_code/c/build/pioasm-install/pioasm/pioasmTargets.cmake
+/Users/macuser1/Pico_code/Pico_code/c/build/pioasm-install/pioasm/pioasmTargets-release.cmake
+/Users/macuser1/Pico_code/Pico_code/c/build/pioasm-install/pioasm/pioasmConfig.cmake
+/Users/macuser1/Pico_code/Pico_code/c/build/pioasm-install/pioasm/pioasmConfigVersion.cmake
