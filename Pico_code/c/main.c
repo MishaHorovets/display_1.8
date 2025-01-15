@@ -51,7 +51,7 @@ char *arrs[] = {arr_1,  arr_2,  arr_3,  arr_4,  arr_5,  arr_6,  arr_7,
                 arr_8,  arr_9,  arr_10, arr_11, arr_12, arr_13, arr_14,
                 arr_15, arr_16, arr_17, arr_18, arr_19, arr_20, arr_21,
                 arr_22, arr_23, arr_24, arr_25, arr_26, arr_27};
-char icon[100];
+char icon[10];
 
 char temperature[10] = {0};
 char curr_time[10] = {0};
@@ -62,7 +62,7 @@ int main(void) {
   // setting up the wifi and connecting to it
   // configuring the wifi
   if (setup(country, ssid, pass, auth, "MyPicoW", NULL, NULL, NULL) == 3) {
-    printf("Connected to wifi, good to go\n");
+    printf("Connected to wifi\n");
   }
 
   httpc_connection_t settings;
@@ -94,7 +94,7 @@ int main(void) {
   int photoIndx = 0;
 
   // variable for cheching wheather new http request should be made
-  // to fetch the data about the weather
+  // to fetch the data about the weather, time
   uint32_t prevWeather = to_ms_since_boot(get_absolute_time()),
            prevTime = to_ms_since_boot(get_absolute_time());
   // sync time every hour
@@ -103,10 +103,10 @@ int main(void) {
   // to check the state of the request
   err_t errWeather, errTime;
   datetime_t datetime;
-  rtc_init();
+  // send a request after initialization
   bool firstTime = true, firstWeather = true;
-  while (true) {
 
+  while (true) {
     // check whether the delay time has passed
     // so that new request should be sent
     uint32_t nextWeather = prevWeather + delayWeather;
@@ -151,7 +151,18 @@ int main(void) {
     printf("Current time: %d-%d-%d %d:%d:%d\n", time_info.tm_year + 1900,
            time_info.tm_mon + 1, time_info.tm_mday, time_info.tm_hour,
            time_info.tm_min, time_info.tm_sec);
-    sprintf(curr_time, "%d:%d", time_info.tm_hour, time_info.tm_min);
+    if (time_info.tm_hour >= 10 && time_info.tm_min >= 10) {
+      sprintf(curr_time, "%d:%d", time_info.tm_hour, time_info.tm_min);
+    }
+    if (time_info.tm_hour < 10) {
+      sprintf(curr_time, "0%d:%d", time_info.tm_hour, time_info.tm_min);
+    }
+    if (time_info.tm_min < 10) {
+      sprintf(curr_time, "%d:0%d", time_info.tm_hour, time_info.tm_min);
+    }
+    if (time_info.tm_hour < 10 && time_info.tm_min < 10) {
+      sprintf(curr_time, "0%d:0%d", time_info.tm_hour, time_info.tm_min);
+    }
     // TODO: logic for icons
     /*  get_curr_icon(myBuff, icon);*/
     // TODO:
@@ -167,13 +178,14 @@ int main(void) {
       photoIndx = 0;
 
     if (temperature != NULL && strlen(temperature) > 0) {
-      Paint_DrawString_EN(0, 1, temperature, &Font16, WHITE, BLACK);
+      Paint_DrawString_EN(13, 1, temperature, &Font16, WHITE, BLACK);
     }
     if (curr_time != NULL && strlen(curr_time) > 0) {
       // for bigger font(16)
       Paint_DrawString_EN(105, 1, curr_time, &Font16, WHITE, BLACK);
     }
-    Paint_DrawImage(d01, 12, 1, 14, 14);
+    Paint_DrawCircle(25, 4, 2, WHITE, DOT_PIXEL_1X1, DRAW_FILL_EMPTY);
+    Paint_DrawImage(d01, 0, 1, 14, 14);
     LCD_1IN8_Display(BlackImage);
     /*DEV_Delay_ms(10);*/
   }
