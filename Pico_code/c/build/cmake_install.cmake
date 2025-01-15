@@ -1,4 +1,4 @@
-# Install script for directory: /Users/macuser1/Pico_code/Pico_code/c
+# Install script for directory: /home/Misha/display_1.8/Pico_code/c
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,22 +34,23 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/local/bin/arm-none-eabi-objdump")
+  set(CMAKE_OBJDUMP "/usr/bin/arm-none-eabi-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/macuser1/Pico_code/Pico_code/c/build/pico-sdk/cmake_install.cmake")
-  include("/Users/macuser1/Pico_code/Pico_code/c/build/lib/Config/cmake_install.cmake")
-  include("/Users/macuser1/Pico_code/Pico_code/c/build/lib/LCD/cmake_install.cmake")
-  include("/Users/macuser1/Pico_code/Pico_code/c/build/lib/GUI/cmake_install.cmake")
+  include("/home/Misha/display_1.8/Pico_code/c/build/pico-sdk/cmake_install.cmake")
+  include("/home/Misha/display_1.8/Pico_code/c/build/lib/Config/cmake_install.cmake")
+  include("/home/Misha/display_1.8/Pico_code/c/build/lib/LCD/cmake_install.cmake")
+  include("/home/Misha/display_1.8/Pico_code/c/build/lib/GUI/cmake_install.cmake")
+  include("/home/Misha/display_1.8/Pico_code/c/build/lib/Fonts/cmake_install.cmake")
 
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/macuser1/Pico_code/Pico_code/c/build/install_local_manifest.txt"
+  file(WRITE "/home/Misha/display_1.8/Pico_code/c/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -65,6 +66,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/macuser1/Pico_code/Pico_code/c/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/Misha/display_1.8/Pico_code/c/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

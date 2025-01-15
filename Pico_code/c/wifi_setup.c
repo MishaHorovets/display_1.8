@@ -1,5 +1,5 @@
 #include "wifi_setup.h"
-
+#include "hardware/rtc.h"
 #include "lwip/apps/http_client.h"
 #include "lwipopts.h"
 #include "pico/cyw43_arch.h"
@@ -15,15 +15,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 char ssid[64] = {0};
 char pass[64] = {0};
 const uint32_t country = CYW43_COUNTRY_WORLDWIDE;
 uint32_t auth = CYW43_AUTH_WPA2_MIXED_PSK;
-char myBuff[2000];
-err_t body(void *arg, struct altcp_pcb *conn, struct pbuf *p, err_t err) {
-  printf("body\n");
-  pbuf_copy_partial(p, myBuff, p->tot_len, 0);
-  printf("%s\n", myBuff);
+// all the buffers
+char myBuff[2048];
+char weatherBuffer[2048];
+char timeBuffer[2048];
+
+err_t bodyWeather(void *arg, struct altcp_pcb *conn, struct pbuf *p,
+                  err_t err) {
+  printf("weatherBody\n");
+  pbuf_copy_partial(p, weatherBuffer, p->tot_len, 0);
+  printf("%s\n", weatherBuffer);
   // actual contens of a website
   // data that is begin fetched
   printf("Contents of pbuf %s\n", (char *)p->payload);
@@ -32,6 +38,32 @@ err_t body(void *arg, struct altcp_pcb *conn, struct pbuf *p, err_t err) {
   }
   return ERR_OK;
 }
+
+err_t bodyTime(void *arg, struct altcp_pcb *conn, struct pbuf *p, err_t err) {
+  printf("timeBody\n");
+  pbuf_copy_partial(p, timeBuffer, p->tot_len, 0);
+  printf("%s\n", timeBuffer);
+  // actual contens of a website
+  // data that is begin fetched
+  printf("Contents of pbuf %s\n", (char *)p->payload);
+  if (p->tot_len > 0) {
+    pbuf_free(p);
+  }
+  return ERR_OK;
+}
+/*err_t body(void *arg, struct altcp_pcb *conn, struct pbuf *p, err_t err) {*/
+/*  printf("body\n");*/
+/*  pbuf_copy_partial(p, myBuff, p->tot_len, 0);*/
+/*  printf("%s\n", myBuff);*/
+/*  // actual contens of a website*/
+/*  // data that is begin fetched*/
+/*  printf("Contents of pbuf %s\n", (char *)p->payload);*/
+/*  if (p->tot_len > 0) {*/
+/*    pbuf_free(p);*/
+/*  }*/
+/*  return ERR_OK;*/
+/*}*/
+
 err_t headers(httpc_state_t *connection, void *arg, struct pbuf *hdr,
               u16_t hdr_len, u32_t content_len) {
   printf("Headers received\n");

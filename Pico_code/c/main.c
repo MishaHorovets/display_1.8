@@ -1,21 +1,33 @@
 ﻿#include "GUI_Paint.h"
 #include "LCD_1in8.h"
 #include "anime/photo.c"
-#include "cJSON.c"
-#include "cJSON.h"
+#include "font12.c"
+#include "font16.c"
 #include "hardware/flash.h"
 #include "hardware/gpio.h"
 #include "hardware/sync.h"
 #include "hardware/uart.h"
-#include "lib/Fonts/font12.c"
+#include "helper_functions.c"
+#include "icons.c"
+#include "lwip/apps/http_client.h"
+#include "lwipopts.h"
+#include "ntp_time.c"
+#include "pico/cyw43_arch.h"
+#include "pico/time.h"
+#include "pico_clock.c"
 #include "wifi_setup.c"
+#include "wifi_setup.h"
+#include <cyw43_country.h>
 #include <hardware/rtc.h>
+#include <lwip/err.h>
 #include <lwip/tcp.h>
 #include <pico/stdio.h>
 #include <pico/stdio_usb.h>
 #include <pico/stdlib.h>
 #include <pico/time.h>
 #include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #define STB_IMAGE_IMPLEMENTATION
 #define PIXEL_COUNT 61440 // number of pixels on the display
@@ -30,140 +42,21 @@
 #define FLASH_WRITE_START (PICO_FLASH_SIZE_BYTES - NVS_SIZE)
 #define FLASH_READ_START (FLASH_WRITE_START + XIP_BASE)
 
-/*bool timerCB(repeating_timer_t *rt) {*/
-/*  int r = 2 * 7;*/
-/*  return true;*/
-/*}*/
-
-// find another library
-void get_time_from_json(const char *json, char *time) {
-  cJSON *json_obj = cJSON_Parse(json);
-  if (json_obj == NULL) {
-    printf("Error parsing JSON\n");
-    return;
-  }
-  cJSON *time_obj = cJSON_GetObjectItem(json_obj, "time_24");
-  if (time_obj == NULL) {
-    printf("Error finding 'time_24' object in JSON\n");
-    cJSON_Delete(json_obj);
-    return;
-  }
-  strcpy(time, time_obj->valuestring);
-  cJSON_Delete(json_obj);
-}
-int get_temperature_from_json(const char *json) {
-  // Parse the JSON data
-  cJSON *json_obj = cJSON_Parse(json);
-  if (json_obj == NULL) {
-    printf("Error parsing JSON just at the start, temp\n");
-    return 1;
-  }
-
-  // Navigate through the JSON structure to get the "temp" field under "main"
-  cJSON *main = cJSON_GetObjectItem(json_obj, "main");
-  if (main == NULL) {
-    printf("Error finding 'main' object in JSON\n");
-    cJSON_Delete(json_obj);
-    return 1;
-  }
-
-  cJSON *temp = cJSON_GetObjectItem(main, "temp");
-  if (temp == NULL) {
-    printf("Error finding 'temp' field in 'main' object\n");
-    cJSON_Delete(json_obj);
-    return 1;
-  }
-
-  // Print the temperature
-  printf("Current temp: %f\n", temp->valuedouble);
-  printf("in int %d\n", (int)temp->valuedouble);
-  int res = temp->valuedouble;
-  // Clean up the JSON object
-  cJSON_Delete(json_obj);
-  return res;
-}
-void get_pass_name_wifi(char *name, char *pass) {
-  bool pass_entered = false, name_entered = false;
-  char wifi[100] = "wifi:";
-  char key[100] = "pass:";
-
-  int wifi_len = strlen(wifi);
-  int key_len = strlen(key);
-  while (!pass_entered || !name_entered) {
-    if (stdio_usb_connected()) {
-      char buffer[128];
-      int len = scanf("%127s", buffer); // Read user input
-      if (len > 0) {
-        printf("You sent: %s\n", buffer);
-
-        // Check if buffer starts with "wifi:"
-        if (!name_entered && strncmp(buffer, wifi, wifi_len) == 0) {
-          memcpy(name, buffer + wifi_len,
-                 strlen(buffer) - wifi_len);      // Copy the part after "wifi:"
-          name[strlen(buffer) - wifi_len] = '\0'; // Null-terminate the name
-          name_entered = true;
-        }
-        // Check if buffer starts with "pass:"
-        else if (!pass_entered && strncmp(buffer, key, key_len) == 0) {
-          memcpy(pass, buffer + key_len,
-                 strlen(buffer) - key_len);      // Copy the part after "pass:"
-          pass[strlen(buffer) - key_len] = '\0'; // Null-terminate the pass
-          pass_entered = true;
-        }
-      }
-    }
-  }
+bool timerCB(repeating_timer_t *rt) {
+  int r = 2 * 7;
+  return true;
 }
 
-void parse_wifi_credentials(const char *input, char *wifi, char *pass) {
-  // Helps to parse the input string to the right format
-  // wifi_name:password
-  const char *colon = strchr(input, ':');
-  if (colon == NULL) {
-    printf("Invalid format. Expected 'wifi:pass'\n");
-    wifi[0] = '\0';
-    pass[0] = '\0';
-    return;
-  }
-  size_t wifi_len = colon - input;
-  strncpy(wifi, input, wifi_len);
-  wifi[wifi_len] = '\0';
-  strcpy(pass, colon + 1);
-}
-void set_name_pass(char *ssid, char *pass) {
-  while (true) {
-    if (stdio_usb_connected()) {
-      char buffer[128];
-      if (fgets(buffer, sizeof(buffer), stdin)) {
-        buffer[strcspn(buffer, "\n")] = '\0';
-        parse_wifi_credentials(buffer, ssid, pass);
-        break;
-      }
-    }
-  }
-}
-void get_curr_time(char *curr_time) {
-  /*datetime_t t;*/
-  /*rtc_get_datetime(&t);*/
-  /*printf("current time: %d:%d:%d\n", t.hour, t.min, t.sec);*/
-  time_t rawtime;
-  struct tm *timeinfo;
-  time(&rawtime);
-  timeinfo = localtime(&rawtime);
-  int hour = timeinfo->tm_hour;
-  int minutes = timeinfo->tm_min;
-  snprintf(curr_time, 6, "%02d:%02d", hour, minutes);
-}
-/*char *arrs[] = {arr_1,  arr_2,  arr_3,  arr_4,  arr_5,  arr_6,  arr_7,*/
-/*                arr_8,  arr_9,  arr_10, arr_11, arr_12, arr_13, arr_14,*/
-/*                arr_15, arr_16, arr_17, arr_18, arr_19, arr_20, arr_21,*/
-/*                arr_22, arr_23, arr_24, arr_25, arr_26, arr_27};*/
+char *arrs[] = {arr_1,  arr_2,  arr_3,  arr_4,  arr_5,  arr_6,  arr_7,
+                arr_8,  arr_9,  arr_10, arr_11, arr_12, arr_13, arr_14,
+                arr_15, arr_16, arr_17, arr_18, arr_19, arr_20, arr_21,
+                arr_22, arr_23, arr_24, arr_25, arr_26, arr_27};
+char icon[100];
 
-char curr_time[100];
-char timeBuff[2000];
+char temperature[10] = {0};
+char curr_time[10] = {0};
 int main(void) {
   stdio_init_all();
-
   // setting up wifi_name and password
   set_name_pass(ssid, pass);
   // setting up the wifi and connecting to it
@@ -198,54 +91,89 @@ int main(void) {
   Paint_Clear(WHITE);
   Paint_SetRotate(ROTATE_0);
 
-  bool flag = true;
-  char temperature[100];
-  int i = 0;
-  // http request
-  /*err_t err =*/
-  /*    httpc_get_file_dns("api.openweathermap.org", 80,*/
-  /*                       "/data/2.5/"*/
-  /*                       "weather?q=Enschede&appid="*/
-  /*                       "1abe25c0ccddb9a35b2931cf9090a3b3&units=metric",*/
-  /*                       &settings, body, NULL, NULL);*/
-  /*if (err != ERR_OK) {*/
-  /*  printf("HTTP request failed with error: %d\n", err);*/
-  /*  return -1;*/
-  /*}*/
+  int photoIndx = 0;
 
-  uint32_t currTime = to_ms_since_boot(get_absolute_time());
-  uint32_t delay = 10000;
+  // variable for cheching wheather new http request should be made
+  // to fetch the data about the weather
+  uint32_t prevWeather = to_ms_since_boot(get_absolute_time()),
+           prevTime = to_ms_since_boot(get_absolute_time());
+  // sync time every hour
+  // fetch weather every 30 minutes
+  uint32_t delayWeather = 1800000, delayTime = 3600000;
+  // to check the state of the request
+  err_t errWeather, errTime;
+  datetime_t datetime;
+  rtc_init();
+  bool firstTime = true, firstWeather = true;
   while (true) {
 
-    uint32_t nextTime = currTime + delay;
-    if (to_ms_since_boot(get_absolute_time()) >= nextTime) {
+    // check whether the delay time has passed
+    // so that new request should be sent
+    uint32_t nextWeather = prevWeather + delayWeather;
+    if (firstWeather || to_ms_since_boot(get_absolute_time()) >= nextWeather) {
 
-      httpc_get_file_dns("api.openweathermap.org", 80,
-                         "/data/2.5/"
-                         "weather?q=Enschede&appid="
-                         "1abe25c0ccddb9a35b2931cf9090a3b3&units=metric",
-                         &settings, body, NULL, NULL);
-      currTime = to_ms_since_boot(get_absolute_time());
+      errWeather =
+          httpc_get_file_dns("api.openweathermap.org", 80,
+                             "/data/2.5/"
+                             "weather?q=Enschede&appid="
+                             "1abe25c0ccddb9a35b2931cf9090a3b3&units=metric",
+                             &settings, bodyWeather, NULL, NULL);
+      prevWeather = to_ms_since_boot(get_absolute_time());
+      firstWeather = false;
     }
-    // TODO: send request every 10 minutes
-    // or whatever interval of time can be considered wise
-    // to fetch data about the weather
+    if (errWeather == ERR_OK && strlen(weatherBuffer) > 1) {
+      get_temp_from_json(myBuff, temperature);
+      errWeather = ERR_VAL;
+    }
+    // TODO: logic for time
+    uint32_t nextTime = prevTime + delayTime;
 
-    if (strlen(myBuff) > 1 && flag) {
-      int curr_temp = get_temperature_from_json(myBuff);
-      itoa(curr_temp, temperature, 10);
-      flag = false;
-    }
-    /*get_time_from_json(myBuff, curr_time);*/
-    get_curr_time(curr_time);
-    /*Paint_DrawImage(arrs[i++], 0, 1, 160, 128);*/
-    /*if (i == 26)*/
-    /*  i = 0;*/
+    if (firstTime || to_ms_since_boot(get_absolute_time()) >= nextTime) {
 
-    if (strlen(temperature) > 0) {
-      Paint_DrawString_EN(0, 1, temperature, &Font12, RED, GREEN);
+      errTime = httpc_get_file_dns(
+          "api.ipgeolocation.io", 80,
+          "/timezone?apiKey=790488a8a8fa4fc18ca63bd7064f1d41&"
+          "tz=Europe/Amsterdam",
+          &settings, bodyTime, NULL, NULL);
+      prevTime = to_ms_since_boot(get_absolute_time());
+      firstTime = false;
     }
-    Paint_DrawString_EN(123, 1, curr_time, &Font12, RED, GREEN);
+    if (errTime == ERR_OK && strlen(timeBuffer) > 1) {
+      get_time_from_json(timeBuffer);
+      errTime = ERR_VAL;
+    }
+    struct tm time_info;
+    time_t current_time;
+
+    // Get current time
+    time(&current_time);
+    localtime_r(&current_time, &time_info);
+    printf("Current time: %d-%d-%d %d:%d:%d\n", time_info.tm_year + 1900,
+           time_info.tm_mon + 1, time_info.tm_mday, time_info.tm_hour,
+           time_info.tm_min, time_info.tm_sec);
+    sprintf(curr_time, "%d:%d", time_info.tm_hour, time_info.tm_min);
+    // TODO: logic for icons
+    /*  get_curr_icon(myBuff, icon);*/
+    // TODO:
+    // convert all images to hex and store them in a file
+    // based on the curr icon fetched from the weather api
+    // display the image on the screen
+    // UPD:
+    // almost done, need to convert to diff resolutions
+    // for diff formats of displaying data
+
+    Paint_DrawImage(arrs[photoIndx++], 0, 1, 160, 128);
+    if (photoIndx == 26)
+      photoIndx = 0;
+
+    if (temperature != NULL && strlen(temperature) > 0) {
+      Paint_DrawString_EN(0, 1, temperature, &Font16, WHITE, BLACK);
+    }
+    if (curr_time != NULL && strlen(curr_time) > 0) {
+      // for bigger font(16)
+      Paint_DrawString_EN(105, 1, curr_time, &Font16, WHITE, BLACK);
+    }
+    Paint_DrawImage(d01, 12, 1, 14, 14);
     LCD_1IN8_Display(BlackImage);
     /*DEV_Delay_ms(10);*/
   }

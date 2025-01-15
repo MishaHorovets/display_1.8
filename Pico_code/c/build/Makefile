@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/macuser1/Pico_code/Pico_code/c
+CMAKE_SOURCE_DIR = /home/Misha/display_1.8/Pico_code/c
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/macuser1/Pico_code/Pico_code/c/build
+CMAKE_BINARY_DIR = /home/Misha/display_1.8/Pico_code/c/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /Users/macuser1/Pico_code/Pico_code/c/build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	/usr/local/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macuser1/Pico_code/Pico_code/c/build/CMakeFiles /Users/macuser1/Pico_code/Pico_code/c/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/CMakeFiles /home/Misha/display_1.8/Pico_code/c/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macuser1/Pico_code/Pico_code/c/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -156,30 +156,17 @@ bs2_default_bin/fast:
 .PHONY : bs2_default_bin/fast
 
 #=============================================================================
-# Target rules for targets named bs2_default_padded_checksummed_asm
+# Target rules for targets named bs2_default_library
 
 # Build rule for target.
-bs2_default_padded_checksummed_asm: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bs2_default_padded_checksummed_asm
-.PHONY : bs2_default_padded_checksummed_asm
+bs2_default_library: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bs2_default_library
+.PHONY : bs2_default_library
 
 # fast build rule for target.
-bs2_default_padded_checksummed_asm/fast:
-	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build
-.PHONY : bs2_default_padded_checksummed_asm/fast
-
-#=============================================================================
-# Target rules for targets named pioasmBuild
-
-# Build rule for target.
-pioasmBuild: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pioasmBuild
-.PHONY : pioasmBuild
-
-# fast build rule for target.
-pioasmBuild/fast:
-	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild.dir/build
-.PHONY : pioasmBuild/fast
+bs2_default_library/fast:
+	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build
+.PHONY : bs2_default_library/fast
 
 #=============================================================================
 # Target rules for targets named cyw43_driver_picow_cyw43_bus_pio_spi_pio_h
@@ -233,4397 +220,4458 @@ GUI/fast:
 	$(MAKE) $(MAKESILENT) -f lib/GUI/CMakeFiles/GUI.dir/build.make lib/GUI/CMakeFiles/GUI.dir/build
 .PHONY : GUI/fast
 
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.obj: Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.obj
+#=============================================================================
+# Target rules for targets named Fonts
 
+# Build rule for target.
+Fonts: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Fonts
+.PHONY : Fonts
+
+# fast build rule for target.
+Fonts/fast:
+	$(MAKE) $(MAKESILENT) -f lib/Fonts/CMakeFiles/Fonts.dir/build.make lib/Fonts/CMakeFiles/Fonts.dir/build
+.PHONY : Fonts/fast
+
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.o: home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.o
+
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.i: Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.i
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.i: home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.i
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.s: Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.s
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.s: home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.s
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.obj: Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.obj
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.o: home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.i: Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.i
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.i: home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.i
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.s: Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.s
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.s: home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.s
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.obj: Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.obj
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.o: home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.i: Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.i
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.i: home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.i
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.s: Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.s
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.s: home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.s
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.obj: Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.obj
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.o: home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.i: Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.i
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.i: home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.i
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.s: Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.s
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.s: home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.s
+home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.obj: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.o: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.i: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.i: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.c.i
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.s: Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.s: home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.c.s
+home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.o: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.o: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.o: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.o: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.o: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.o: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.o: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.o: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.o: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.obj: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.o: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.i: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.s: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.s: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.o: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.obj: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.o: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.i: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.i: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.s: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.s: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.obj: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.o: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.i: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.s: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.s: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.o: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.o: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.obj: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.o: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.o
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.i: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.i: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.c.i
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.i
 
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.s: Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.s: home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.c.s
+home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.s
 
-Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.obj: Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.obj
+home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.o: home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.c.obj
+home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.c.o
 
-Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.i: Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.i
+home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.i: home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.c.i
+home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.c.i
 
-Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.s: Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.s
+home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.s: home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.c.s
+home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.c.s
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.obj: Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.obj
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.o: home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.c.o
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.i: Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.i
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.i: home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.c.i
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.c.i
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.s: Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.s
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.s: home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.c.s
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.c.s
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.obj: Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.obj
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.o: home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.c.o
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.i: Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.i
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.i: home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.c.i
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.c.i
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.s: Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.s
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.s: home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.c.s
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.c.s
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.obj: Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.obj
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.o: home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.c.o
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.i: Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.i
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.i: home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.c.i
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.c.i
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.s: Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.s
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.s: home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.c.s
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.c.s
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.obj: Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.obj
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.o: home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.c.obj
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.c.o
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.i: Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.i
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.i: home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.c.i
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.c.i
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.s: Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.s
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.s: home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.c.s
+home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.c.s
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.obj: Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.obj
+home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.o: home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.c.obj
+home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.c.o
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.i: Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.i
+home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.i: home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.c.i
+home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.c.i
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.s: Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.s
+home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.s: home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.c.s
+home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.c.s
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.obj: Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.obj
+home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.o: home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.c.o
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.i: Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.i
+home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.i: home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
+home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.c.i
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.s: Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.s
+home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.s: home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
+home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.obj: Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.obj
+home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.o: home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.c.obj
+home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.c.o
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.i: Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.i
+home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.i: home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.c.i
+home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.c.i
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.s: Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.s
+home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.s: home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.c.s
+home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.c.s
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.obj: Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.obj
+home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.o: home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.c.obj
+home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.o
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.i: Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.i
+home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.i: home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.c.i
+home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.i
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.s: Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.s
+home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.s: home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.c.s
+home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.s
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.obj: Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.obj
+home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.o: home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.c.obj
+home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.c.o
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.i: Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.i
+home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.i: home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.c.i
+home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.c.i
 
-Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.s: Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.s
+home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.s: home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.c.s
+home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.obj: Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.o: home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.i: Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.i
+home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.i: home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.s: Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.s
+home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.s: home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_divider/divider.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_divider/divider.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_divider/divider.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.o
+
+# target to build an object file
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.o
+
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.i
+
+# target to preprocess a source file
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.obj
+# target to generate assembly for a file
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_crt0/crt0.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_crt0/crt0.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_crt0/crt0.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_crt0/crt0.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider_hardware.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider_hardware.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.o
+
+# target to build an object file
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
+
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i
+
+# target to preprocess a source file
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s
+
+# target to generate assembly for a file
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.o: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.o
 
 # target to build an object file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i
 
 # target to preprocess a source file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s: Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s: home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s
 
 # target to generate assembly for a file
-Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
-.PHONY : Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+.PHONY : home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 
-main.obj: main.c.obj
-.PHONY : main.obj
+main.o: main.c.o
+.PHONY : main.o
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.obj
-.PHONY : main.c.obj
+main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.o
+.PHONY : main.c.o
 
 main.i: main.c.i
 .PHONY : main.i
@@ -4650,563 +4698,569 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bs2_default_bin"
-	@echo "... bs2_default_padded_checksummed_asm"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
-	@echo "... pioasmBuild"
 	@echo "... Config"
+	@echo "... Fonts"
 	@echo "... GUI"
 	@echo "... LCD"
 	@echo "... bs2_default"
+	@echo "... bs2_default_library"
 	@echo "... main"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_ll.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/cyw43-driver/src/cyw43_stats.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_lib.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/api_msg.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/err.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/if_api.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netbuf.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netdb.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/netifapi.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/sockets.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/api/tcpip.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/fs.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/http_client.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/apps/http/httpd.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_alloc.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/altcp_tcp.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/def.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/dns.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/inet_chksum.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/init.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ip.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/acd.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/autoip.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/dhcp.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/etharp.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/icmp.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/igmp.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ethip6.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/icmp6.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/inet6.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/mld6.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/ipv6/nd6.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/mem.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/memp.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/netif.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/pbuf.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/raw.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/stats.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/sys.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_in.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/tcp_out.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/timeouts.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/core/udp.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ethernet.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_ble.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/lowpan6_common.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/auth.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ccp.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap-new.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/demand.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eap.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ecp.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/eui64.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/fsm.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipcp.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/lcp.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/magic.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/mppe.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/multilink.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/ppp.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppapi.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppoe.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/pppos.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/upap.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/utils.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/ppp/vj.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/slipif.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/lwip/src/netif/zepif.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/class/video/video_device.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/device/usbd_control.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/lib/tinyusb/src/tusb.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/hardware_claim/claim.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_sync/critical_section.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_sync/lock_core.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_sync/mutex.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_sync/sem.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_time/time.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_time/timeout_helper.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_util/datetime.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_util/pheap.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/common/pico_util/queue.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2040/pico_platform/platform.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_adc/adc.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_dma/dma.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_exception/exception.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_flash/flash.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pio/pio.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_pll/pll.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_spi/spi.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync/sync.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_timer/timer.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_uart/uart.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_base.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_atomic/atomic.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_crt0/crt0.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_math.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_math.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_malloc/malloc.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_printf/printf.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_rand/rand.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i"
-	@echo "... Users/macuser1/Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s"
-	@echo "... main.obj"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_ll.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_stats.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_lib.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/api_msg.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/err.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/if_api.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netbuf.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netdb.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/netifapi.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/sockets.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/api/tcpip.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/altcp_proxyconnect.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/fs.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/http_client.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/apps/http/httpd.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_alloc.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/altcp_tcp.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/def.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/dns.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/inet_chksum.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/init.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ip.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/acd.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/autoip.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/dhcp.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/etharp.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/icmp.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/igmp.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ethip6.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/icmp6.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/inet6.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/mld6.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv6/nd6.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/mem.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/memp.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/netif.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/pbuf.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/raw.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/stats.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/sys.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_in.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/tcp_out.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/timeouts.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/udp.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ethernet.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_ble.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/lowpan6_common.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/auth.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ccp.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap-new.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/demand.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eap.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ecp.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/eui64.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/fsm.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipcp.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/lcp.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/magic.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/mppe.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/multilink.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/ppp.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppapi.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppoe.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/pppos.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/upap.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/utils.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/ppp/vj.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/slipif.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/lwip/src/netif/zepif.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/video/video_device.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/hardware_claim/claim.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/mutex.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/sem.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_time/time.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_time/timeout_helper.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_util/datetime.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_util/pheap.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/common/pico_util/queue.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/platform.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_adc/adc.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_divider/divider.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_dma/dma.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_exception/exception.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pio/pio.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_rtc/rtc.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_base.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_atomic/atomic.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_crt0/crt0.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider_hardware.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_flash/flash.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_lwip/lwip_nosys.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/malloc.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_platform_panic/panic.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/rand.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.o"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i"
+	@echo "... home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s"
+	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 .PHONY : help
