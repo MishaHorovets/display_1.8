@@ -1119,7 +1119,7 @@ Disassembly of section .text:
 10000a4c:	200011d8 	.word	0x200011d8
 10000a50:	200012d4 	.word	0x200012d4
 10000a54:	20003da8 	.word	0x20003da8
-10000a58:	001b7740 	.word	0x001b7740
+10000a58:	000dbba0 	.word	0x000dbba0
 10000a5c:	0036ee80 	.word	0x0036ee80
 10000a60:	48af      	ldr	r0, [pc, #700]	@ (10000d20 <main+0x708>)
 10000a62:	f004 fcfb 	bl	1000545c <__wrap_puts>

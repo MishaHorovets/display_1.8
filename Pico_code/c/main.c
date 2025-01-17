@@ -89,7 +89,7 @@ int main(void) {
            prevTime = to_ms_since_boot(get_absolute_time());
   // sync time every hour
   // fetch weather every 30 minutes
-  uint32_t delayWeather = 1800000, delayTime = 3600000;
+  uint32_t delayWeather = 900000, delayTime = 3600000;
   // to check the state of the request
   err_t errWeather, errTime;
   datetime_t datetime;
