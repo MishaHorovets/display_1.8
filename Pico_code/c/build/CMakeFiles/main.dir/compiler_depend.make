@@ -12330,6 +12330,7 @@ CMakeFiles/main.dir/main.c.o: /home/Misha/display_1.8/Pico_code/c/main.c \
   /home/Misha/pico_sdk/pico-sdk/src/common/pico_time/include/pico/time.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
@@ -12343,6 +12344,8 @@ CMakeFiles/main.dir/main.c.o: /home/Misha/display_1.8/Pico_code/c/main.c \
   /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
+  /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/vreg_and_chip_reset.h \
+  /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/io_bank0.h \
@@ -12357,10 +12360,12 @@ CMakeFiles/main.dir/main.c.o: /home/Misha/display_1.8/Pico_code/c/main.c \
   /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
+  /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/vreg_and_chip_reset.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2040/pico_platform/include/pico/platform/cpu_regs.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/include/hardware/flash.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
@@ -12373,6 +12378,7 @@ CMakeFiles/main.dir/main.c.o: /home/Misha/display_1.8/Pico_code/c/main.c \
   /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h \
+  /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/include/hardware/vreg.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_async_context/include/pico/async_context.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/include/pico/cyw43_arch.h \
   /home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/include/pico/cyw43_arch/arch_threadsafe_background.h \

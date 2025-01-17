@@ -128,6 +128,7 @@ void get_temp_from_json(char *input_json, char *res) {
   double temperature = atof(res);
   /*printf("Extracted temperature: %f\n", temperature);*/
   int temp_int = round(temperature);
+  /*int temp_int = -25;*/
   sprintf(res, "%d", temp_int);
   /*printf("Extracted temperature (integer): %s\n", res);*/
 }

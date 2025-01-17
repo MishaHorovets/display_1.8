@@ -3,10 +3,12 @@
 #include "anime/photo.c"
 #include "font12.c"
 #include "font16.c"
+#include "hardware/clocks.h"
 #include "hardware/flash.h"
 #include "hardware/gpio.h"
 #include "hardware/sync.h"
 #include "hardware/uart.h"
+#include "hardware/vreg.h"
 #include "helper_functions.c"
 #include "lwip/apps/http_client.h"
 #include "lwipopts.h"
@@ -26,7 +28,6 @@
 #include <pico/time.h>
 #include <stddef.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #define PAGE_SIZE 256
 #define NVS_SIZE 4096
@@ -37,7 +38,6 @@ bool timerCB(repeating_timer_t *rt) {
   int r = 2 * 7;
   return true;
 }
-
 char *arrs[] = {arr_1,  arr_2,  arr_3,  arr_4,  arr_5,  arr_6,  arr_7,
                 arr_8,  arr_9,  arr_10, arr_11, arr_12, arr_13, arr_14,
                 arr_15, arr_16, arr_17, arr_18, arr_19, arr_20, arr_21,
@@ -48,6 +48,7 @@ char input_buffer[1024];
 
 int main(void) {
   stdio_init_all();
+  set_sys_clock_khz(240000, true);
   // setting up wifi_name and password
   set_name_pass(ssid, pass);
   // setting up the wifi and connecting to it
@@ -158,11 +159,17 @@ int main(void) {
       photoIndx = 0;
     if (strlen(temperature) > 0) {
       Paint_DrawString_EN(13, 1, temperature, curr_font, WHITE, CLEAR);
+      // TODO: implement for other font sizes
+
+      if (curr_font == &Font16) {
+        Paint_DrawCircle(13 + (strlen(temperature) * 12), 4, 2, WHITE,
+                         DOT_PIXEL_1X1, DRAW_FILL_EMPTY);
+      }
     }
     if (strlen(curr_time) > 0) {
       Paint_DrawString_EN(105, 1, curr_time, curr_font, WHITE, CLEAR);
     }
-    Paint_DrawCircle(25, 4, 2, WHITE, DOT_PIXEL_1X1, DRAW_FILL_EMPTY);
+    /*Paint_DrawCircle(25, 4, 2, WHITE, DOT_PIXEL_1X1, DRAW_FILL_EMPTY);*/
     if (strlen(icon) > 0) {
       for (int i = 0; i < sizeof(icon_map) / sizeof(icon_map[0]); i++) {
         if (strcmp(icon, icon_map[i].icon) == 0) {
@@ -170,11 +177,11 @@ int main(void) {
         }
       }
     }
+
+    read_from_stdin(input_buffer, 1024);
+    Paint_DrawString_EN(50, 50, input_buffer, curr_font, RED, BLACK);
     LCD_1IN8_Display(BlackImage);
     /*DEV_Delay_ms(10);*/
-    /*read_from_stdin(input_buffer, 1024);*/
-    /*if (strlen(input_buffer) > 0)*/
-    /*  Paint_DrawString_EN(50, 50, input_buffer, curr_font, WHITE, CLEAR);*/
   }
   free(BlackImage);
   BlackImage = NULL;

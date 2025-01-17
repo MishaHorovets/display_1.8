@@ -87,9 +87,15 @@ CMakeFiles/main.dir/main.c.o: /home/Misha/display_1.8/Pico_code/c/main.c \
  /home/Misha/display_1.8/Pico_code/c/./lib/Fonts/font12.c \
  /home/Misha/display_1.8/Pico_code/c/./lib/Fonts/fonts.h \
  /home/Misha/display_1.8/Pico_code/c/./lib/Fonts/font16.c \
+ /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
+ /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h \
+ /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h \
  /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/include/hardware/flash.h \
  /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
  /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+ /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/include/hardware/vreg.h \
+ /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/vreg_and_chip_reset.h \
+ /home/Misha/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/vreg_and_chip_reset.h \
  /home/Misha/display_1.8/Pico_code/c/helper_functions.c \
  /home/Misha/display_1.8/Pico_code/c/icons.c \
  /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.h \
