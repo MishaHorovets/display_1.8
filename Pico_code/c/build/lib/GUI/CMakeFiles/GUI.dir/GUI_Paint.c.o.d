@@ -1,6 +1,14 @@
 lib/GUI/CMakeFiles/GUI.dir/GUI_Paint.c.o: \
  /home/Misha/display_1.8/Pico_code/c/lib/GUI/GUI_Paint.c \
  /home/Misha/display_1.8/Pico_code/c/lib/GUI/GUI_Paint.h \
+ /home/Misha/display_1.8/Pico_code/c/lib/GUI/../Fonts/fonts.h \
+ /usr/lib/gcc/arm-none-eabi/14.2.0/include/stdint.h \
+ /usr/arm-none-eabi/include/stdint.h \
+ /usr/arm-none-eabi/include/machine/_default_types.h \
+ /usr/arm-none-eabi/include/sys/features.h \
+ /usr/arm-none-eabi/include/_newlib_version.h \
+ /usr/arm-none-eabi/include/sys/_intsup.h \
+ /usr/arm-none-eabi/include/sys/_stdint.h \
  /home/Misha/display_1.8/Pico_code/c/lib/GUI/../Config/DEV_Config.h \
  /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
  /home/Misha/pico_sdk/pico-sdk/src/common/pico_base_headers/include/pico.h \
@@ -9,15 +17,8 @@ lib/GUI/CMakeFiles/GUI.dir/GUI_Paint.c.o: \
  /usr/lib/gcc/arm-none-eabi/14.2.0/include/stdbool.h \
  /usr/arm-none-eabi/include/assert.h /usr/arm-none-eabi/include/_ansi.h \
  /usr/arm-none-eabi/include/newlib.h \
- /usr/arm-none-eabi/include/_newlib_version.h \
  /usr/arm-none-eabi/include/sys/config.h \
  /usr/arm-none-eabi/include/machine/ieeefp.h \
- /usr/arm-none-eabi/include/sys/features.h \
- /usr/lib/gcc/arm-none-eabi/14.2.0/include/stdint.h \
- /usr/arm-none-eabi/include/stdint.h \
- /usr/arm-none-eabi/include/machine/_default_types.h \
- /usr/arm-none-eabi/include/sys/_intsup.h \
- /usr/arm-none-eabi/include/sys/_stdint.h \
  /usr/lib/gcc/arm-none-eabi/14.2.0/include/stddef.h \
  /home/Misha/display_1.8/Pico_code/c/build/generated/pico_base/pico/version.h \
  /home/Misha/pico_sdk/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -79,7 +80,6 @@ lib/GUI/CMakeFiles/GUI.dir/GUI_Paint.c.o: \
  /usr/arm-none-eabi/include/machine/_types.h \
  /usr/arm-none-eabi/include/sys/lock.h \
  /usr/arm-none-eabi/include/sys/stdio.h \
- /home/Misha/display_1.8/Pico_code/c/lib/GUI/../Fonts/fonts.h \
  /home/Misha/display_1.8/Pico_code/c/lib/GUI/../Config/Debug.h \
  /usr/arm-none-eabi/include/math.h /usr/arm-none-eabi/include/stdlib.h \
  /usr/arm-none-eabi/include/machine/stdlib.h \

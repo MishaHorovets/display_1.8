@@ -154,30 +154,6 @@ font12.c.s:
 	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f lib/Fonts/CMakeFiles/Fonts.dir/build.make lib/Fonts/CMakeFiles/Fonts.dir/font12.c.s
 .PHONY : font12.c.s
 
-font12CN.o: font12CN.c.o
-.PHONY : font12CN.o
-
-# target to build an object file
-font12CN.c.o:
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f lib/Fonts/CMakeFiles/Fonts.dir/build.make lib/Fonts/CMakeFiles/Fonts.dir/font12CN.c.o
-.PHONY : font12CN.c.o
-
-font12CN.i: font12CN.c.i
-.PHONY : font12CN.i
-
-# target to preprocess a source file
-font12CN.c.i:
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f lib/Fonts/CMakeFiles/Fonts.dir/build.make lib/Fonts/CMakeFiles/Fonts.dir/font12CN.c.i
-.PHONY : font12CN.c.i
-
-font12CN.s: font12CN.c.s
-.PHONY : font12CN.s
-
-# target to generate assembly for a file
-font12CN.c.s:
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f lib/Fonts/CMakeFiles/Fonts.dir/build.make lib/Fonts/CMakeFiles/Fonts.dir/font12CN.c.s
-.PHONY : font12CN.c.s
-
 font16.o: font16.c.o
 .PHONY : font16.o
 
@@ -250,30 +226,6 @@ font24.c.s:
 	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f lib/Fonts/CMakeFiles/Fonts.dir/build.make lib/Fonts/CMakeFiles/Fonts.dir/font24.c.s
 .PHONY : font24.c.s
 
-font24CN.o: font24CN.c.o
-.PHONY : font24CN.o
-
-# target to build an object file
-font24CN.c.o:
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f lib/Fonts/CMakeFiles/Fonts.dir/build.make lib/Fonts/CMakeFiles/Fonts.dir/font24CN.c.o
-.PHONY : font24CN.c.o
-
-font24CN.i: font24CN.c.i
-.PHONY : font24CN.i
-
-# target to preprocess a source file
-font24CN.c.i:
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f lib/Fonts/CMakeFiles/Fonts.dir/build.make lib/Fonts/CMakeFiles/Fonts.dir/font24CN.c.i
-.PHONY : font24CN.c.i
-
-font24CN.s: font24CN.c.s
-.PHONY : font24CN.s
-
-# target to generate assembly for a file
-font24CN.c.s:
-	cd /home/Misha/display_1.8/Pico_code/c/build && $(MAKE) $(MAKESILENT) -f lib/Fonts/CMakeFiles/Fonts.dir/build.make lib/Fonts/CMakeFiles/Fonts.dir/font24CN.c.s
-.PHONY : font24CN.c.s
-
 font8.o: font8.c.o
 .PHONY : font8.o
 
@@ -310,9 +262,6 @@ help:
 	@echo "... font12.o"
 	@echo "... font12.i"
 	@echo "... font12.s"
-	@echo "... font12CN.o"
-	@echo "... font12CN.i"
-	@echo "... font12CN.s"
 	@echo "... font16.o"
 	@echo "... font16.i"
 	@echo "... font16.s"
@@ -322,9 +271,6 @@ help:
 	@echo "... font24.o"
 	@echo "... font24.i"
 	@echo "... font24.s"
-	@echo "... font24CN.o"
-	@echo "... font24CN.i"
-	@echo "... font24CN.s"
 	@echo "... font8.o"
 	@echo "... font8.i"
 	@echo "... font8.s"

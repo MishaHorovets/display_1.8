@@ -2355,7 +2355,7 @@ CMakeFiles/main.dir/all: lib/GUI/CMakeFiles/GUI.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/CMakeFiles 98
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/CMakeFiles 97
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/CMakeFiles 0
 .PHONY : CMakeFiles/main.dir/rule
@@ -2382,12 +2382,12 @@ CMakeFiles/main.dir/clean:
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Misha/display_1.8/Pico_code/c/build/CMakeFiles --progress-num=49 "Built target bs2_default"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Misha/display_1.8/Pico_code/c/build/CMakeFiles --progress-num= "Built target bs2_default"
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all
 
 # Build rule for subdir invocation for target.
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/CMakeFiles 0
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/rule
@@ -2399,7 +2399,7 @@ bs2_default: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/rule
 # codegen rule for target.
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Misha/display_1.8/Pico_code/c/build/CMakeFiles --progress-num=49 "Finished codegen for target bs2_default"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Misha/display_1.8/Pico_code/c/build/CMakeFiles --progress-num= "Finished codegen for target bs2_default"
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/codegen
 
 # clean rule for target.
@@ -2414,7 +2414,7 @@ pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/clean:
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Misha/display_1.8/Pico_code/c/build/CMakeFiles --progress-num= "Built target bs2_default_bin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Misha/display_1.8/Pico_code/c/build/CMakeFiles --progress-num=49 "Built target bs2_default_bin"
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2431,7 +2431,7 @@ bs2_default_bin: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/
 # codegen rule for target.
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/codegen: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Misha/display_1.8/Pico_code/c/build/CMakeFiles --progress-num= "Finished codegen for target bs2_default_bin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Misha/display_1.8/Pico_code/c/build/CMakeFiles --progress-num=49 "Finished codegen for target bs2_default_bin"
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/codegen
 
 # clean rule for target.
@@ -2451,7 +2451,7 @@ pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all: pico-sdk
 
 # Build rule for subdir invocation for target.
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/CMakeFiles 0
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/rule
@@ -2515,7 +2515,7 @@ lib/Config/CMakeFiles/Config.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles
 
 # Build rule for subdir invocation for target.
 lib/Config/CMakeFiles/Config.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/Config/CMakeFiles/Config.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/CMakeFiles 0
 .PHONY : lib/Config/CMakeFiles/Config.dir/rule
@@ -2543,7 +2543,7 @@ lib/LCD/CMakeFiles/LCD.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_d
 lib/LCD/CMakeFiles/LCD.dir/all: lib/Config/CMakeFiles/Config.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/LCD/CMakeFiles/LCD.dir/build.make lib/LCD/CMakeFiles/LCD.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/LCD/CMakeFiles/LCD.dir/build.make lib/LCD/CMakeFiles/LCD.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Misha/display_1.8/Pico_code/c/build/CMakeFiles --progress-num=34,35,36,37,38,39,40,41,42,43,44,45,46,47,48 "Built target LCD"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Misha/display_1.8/Pico_code/c/build/CMakeFiles --progress-num=33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48 "Built target LCD"
 .PHONY : lib/LCD/CMakeFiles/LCD.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2560,7 +2560,7 @@ LCD: lib/LCD/CMakeFiles/LCD.dir/rule
 # codegen rule for target.
 lib/LCD/CMakeFiles/LCD.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f lib/LCD/CMakeFiles/LCD.dir/build.make lib/LCD/CMakeFiles/LCD.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Misha/display_1.8/Pico_code/c/build/CMakeFiles --progress-num=34,35,36,37,38,39,40,41,42,43,44,45,46,47,48 "Finished codegen for target LCD"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Misha/display_1.8/Pico_code/c/build/CMakeFiles --progress-num=33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48 "Finished codegen for target LCD"
 .PHONY : lib/LCD/CMakeFiles/LCD.dir/codegen
 
 # clean rule for target.
@@ -2576,12 +2576,12 @@ lib/GUI/CMakeFiles/GUI.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_d
 lib/GUI/CMakeFiles/GUI.dir/all: lib/Config/CMakeFiles/Config.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/GUI/CMakeFiles/GUI.dir/build.make lib/GUI/CMakeFiles/GUI.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/GUI/CMakeFiles/GUI.dir/build.make lib/GUI/CMakeFiles/GUI.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Misha/display_1.8/Pico_code/c/build/CMakeFiles --progress-num=18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33 "Built target GUI"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Misha/display_1.8/Pico_code/c/build/CMakeFiles --progress-num=18,19,20,21,22,23,24,25,26,27,28,29,30,31,32 "Built target GUI"
 .PHONY : lib/GUI/CMakeFiles/GUI.dir/all
 
 # Build rule for subdir invocation for target.
 lib/GUI/CMakeFiles/GUI.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/CMakeFiles 33
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/CMakeFiles 31
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/GUI/CMakeFiles/GUI.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/Misha/display_1.8/Pico_code/c/build/CMakeFiles 0
 .PHONY : lib/GUI/CMakeFiles/GUI.dir/rule
@@ -2593,7 +2593,7 @@ GUI: lib/GUI/CMakeFiles/GUI.dir/rule
 # codegen rule for target.
 lib/GUI/CMakeFiles/GUI.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f lib/GUI/CMakeFiles/GUI.dir/build.make lib/GUI/CMakeFiles/GUI.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Misha/display_1.8/Pico_code/c/build/CMakeFiles --progress-num=18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33 "Finished codegen for target GUI"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Misha/display_1.8/Pico_code/c/build/CMakeFiles --progress-num=18,19,20,21,22,23,24,25,26,27,28,29,30,31,32 "Finished codegen for target GUI"
 .PHONY : lib/GUI/CMakeFiles/GUI.dir/codegen
 
 # clean rule for target.

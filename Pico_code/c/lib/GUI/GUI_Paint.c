@@ -498,7 +498,9 @@ void Paint_DrawChar(UWORD Xpoint, UWORD Ypoint, const char Acsii_Char,
         // Paint_DrawPoint(Xpoint + Column, Ypoint + Page, Color_Foreground,
         // DOT_PIXEL_DFT, DOT_STYLE_DFT);
       } else {
-        Paint_SetPixel(Xpoint + Column, Ypoint + Page, Color_Foreground);
+        // to display the background color uncomment the line below
+        if (Color_Foreground != CLEAR)
+          Paint_SetPixel(Xpoint + Column, Ypoint + Page, Color_Foreground);
         // Paint_DrawPoint(Xpoint + Column, Ypoint + Page, Color_Background,
         // DOT_PIXEL_DFT, DOT_STYLE_DFT);
       }
@@ -726,15 +728,26 @@ void Paint_DrawTime(UWORD Xstart, UWORD Ystart, PAINT_TIME *pTime, sFONT *Font,
 }
 
 void Paint_DrawImage(const unsigned char *image, UWORD xStart, UWORD yStart,
-                     UWORD W_Image, UWORD H_Image) {
+                     UWORD W_Image, UWORD H_Image, bool IgnoreBlackBackground) {
   int i, j;
   for (j = 0; j < H_Image; j++) {
     for (i = 0; i < W_Image; i++) {
       if (xStart + i < Paint.WidthMemory &&
           yStart + j < Paint.HeightMemory) // Exceeded part does not display
-        Paint_SetPixel(xStart + i, yStart + j,
-                       (*(image + j * W_Image * 2 + i * 2 + 1)) << 8 |
-                           (*(image + j * W_Image * 2 + i * 2)));
+        // if curr pixel if set to 0x00 then ignore it
+        if (((*(image + j * W_Image * 2 + i * 2 + 1)) == 0x00 ||
+             (*(image + j * W_Image * 2 + i * 2)) == 0x00) &&
+            IgnoreBlackBackground) {
+          continue;
+        }
+
+      Paint_SetPixel(xStart + i, yStart + j,
+                     (*(image + j * W_Image * 2 + i * 2 + 1)) << 8 |
+                         (*(image + j * W_Image * 2 + i * 2)));
+
+      /*Paint_SetPixel(xStart + i, yStart + j,*/
+      /*               (*(image + j * W_Image * 2 + i * 2 + 1)) << 8 |*/
+      /*                   (*(image + j * W_Image * 2 + i * 2)));*/
       // Using arrays is a property of sequential storage, accessing the
       // original array by algorithm j*W_Image*2 			   Y
       // offset i*2              	   X offset

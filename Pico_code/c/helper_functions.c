@@ -1,9 +1,25 @@
-#include "nxjson.c"
-#include "nxjson.h"
+#include "icons.c"
+#include "tusb.h"
+#include <math.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+typedef struct {
+  const char *icon;
+  unsigned char *img;
+} IconMapping;
+
+// just like switch case for choosing correct image
+// based on the data fetched from api
+IconMapping icon_map[] = {
+    {"01d", sun},         {"01n", moon},       {"02d", cloudy_sun},
+    {"02n", cloudy_moon}, {"03d", cloudy},     {"03n", cloudy},
+    {"04d", cloudy},      {"04n", cloudy},     {"10d", rain_day},
+    {"09d", rain_day},    {"10n", rain_night}, {"09n", rain_night},
+    {"11d", thunder},     {"11n", thunder},    {"13d", snow},
+    {"13n", snow},        {"50n", mist}};
+
 void get_pass_name_wifi(char *name, char *pass) {
   bool pass_entered = false, name_entered = false;
   char wifi[100] = "wifi:";
@@ -64,7 +80,34 @@ void set_name_pass(char *ssid, char *pass) {
     }
   }
 }
-
+void read_from_stdin(char *input, size_t input_size) {
+  if (stdio_usb_connected()) {
+    char buffer[1028];
+    if (fgets(buffer, sizeof(buffer), stdin)) {
+      buffer[strcspn(buffer, "\n")] = '\0';
+      strcpy(input, buffer);
+    }
+  }
+}
+void get_icon_from_json(char *input_json, char *res) {
+  if (input_json == NULL || strlen(input_json) == 0) {
+    printf("Input json is null\n");
+    return;
+  }
+  char *icon = strstr(input_json, "icon");
+  if (icon == NULL) {
+    printf("Icon not found\n");
+    return;
+  }
+  icon += 7;
+  int indx = 0;
+  while (icon != NULL && *icon != '"') {
+    /*printf("%c\n", *icon);*/
+    res[indx++] = *icon;
+    icon++;
+  }
+  /*printf("Extracted icon: %s\n", res);*/
+}
 void get_temp_from_json(char *input_json, char *res) {
   if (input_json == NULL || strlen(input_json) == 0) {
     printf("Input json is null\n");
@@ -78,12 +121,13 @@ void get_temp_from_json(char *input_json, char *res) {
   temp += 6;
   int indx = 0;
   while (temp != NULL && *temp != ',') {
-    printf("%c\n", *temp);
+    /*printf("%c\n", *temp);*/
     res[indx++] = *temp;
     temp++;
   }
   double temperature = atof(res);
-  int temp_int = (int)temperature; // Truncate the decimal part
+  /*printf("Extracted temperature: %f\n", temperature);*/
+  int temp_int = round(temperature);
   sprintf(res, "%d", temp_int);
-  printf("Extracted temperature (integer): %s\n", res);
+  /*printf("Extracted temperature (integer): %s\n", res);*/
 }

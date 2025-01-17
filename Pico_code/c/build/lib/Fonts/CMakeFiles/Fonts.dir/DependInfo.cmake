@@ -9,11 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font12.c" "lib/Fonts/CMakeFiles/Fonts.dir/font12.c.o" "gcc" "lib/Fonts/CMakeFiles/Fonts.dir/font12.c.o.d"
-  "/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font12CN.c" "lib/Fonts/CMakeFiles/Fonts.dir/font12CN.c.o" "gcc" "lib/Fonts/CMakeFiles/Fonts.dir/font12CN.c.o.d"
   "/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font16.c" "lib/Fonts/CMakeFiles/Fonts.dir/font16.c.o" "gcc" "lib/Fonts/CMakeFiles/Fonts.dir/font16.c.o.d"
   "/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font20.c" "lib/Fonts/CMakeFiles/Fonts.dir/font20.c.o" "gcc" "lib/Fonts/CMakeFiles/Fonts.dir/font20.c.o.d"
   "/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font24.c" "lib/Fonts/CMakeFiles/Fonts.dir/font24.c.o" "gcc" "lib/Fonts/CMakeFiles/Fonts.dir/font24.c.o.d"
-  "/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font24CN.c" "lib/Fonts/CMakeFiles/Fonts.dir/font24CN.c.o" "gcc" "lib/Fonts/CMakeFiles/Fonts.dir/font24CN.c.o.d"
   "/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font8.c" "lib/Fonts/CMakeFiles/Fonts.dir/font8.c.o" "gcc" "lib/Fonts/CMakeFiles/Fonts.dir/font8.c.o.d"
   )
 

@@ -1,5 +1,13 @@
 CMakeFiles/main.dir/main.c.o: /home/Misha/display_1.8/Pico_code/c/main.c \
  /home/Misha/display_1.8/Pico_code/c/./lib/GUI/GUI_Paint.h \
+ /home/Misha/display_1.8/Pico_code/c/./lib/GUI/../Fonts/fonts.h \
+ /usr/lib/gcc/arm-none-eabi/14.2.0/include/stdint.h \
+ /usr/arm-none-eabi/include/stdint.h \
+ /usr/arm-none-eabi/include/machine/_default_types.h \
+ /usr/arm-none-eabi/include/sys/features.h \
+ /usr/arm-none-eabi/include/_newlib_version.h \
+ /usr/arm-none-eabi/include/sys/_intsup.h \
+ /usr/arm-none-eabi/include/sys/_stdint.h \
  /home/Misha/display_1.8/Pico_code/c/./lib/Config/DEV_Config.h \
  /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
  /home/Misha/pico_sdk/pico-sdk/src/common/pico_base_headers/include/pico.h \
@@ -8,15 +16,8 @@ CMakeFiles/main.dir/main.c.o: /home/Misha/display_1.8/Pico_code/c/main.c \
  /usr/lib/gcc/arm-none-eabi/14.2.0/include/stdbool.h \
  /usr/arm-none-eabi/include/assert.h /usr/arm-none-eabi/include/_ansi.h \
  /usr/arm-none-eabi/include/newlib.h \
- /usr/arm-none-eabi/include/_newlib_version.h \
  /usr/arm-none-eabi/include/sys/config.h \
  /usr/arm-none-eabi/include/machine/ieeefp.h \
- /usr/arm-none-eabi/include/sys/features.h \
- /usr/lib/gcc/arm-none-eabi/14.2.0/include/stdint.h \
- /usr/arm-none-eabi/include/stdint.h \
- /usr/arm-none-eabi/include/machine/_default_types.h \
- /usr/arm-none-eabi/include/sys/_intsup.h \
- /usr/arm-none-eabi/include/sys/_stdint.h \
  /usr/lib/gcc/arm-none-eabi/14.2.0/include/stddef.h \
  /home/Misha/display_1.8/Pico_code/c/build/generated/pico_base/pico/version.h \
  /home/Misha/pico_sdk/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -78,7 +79,6 @@ CMakeFiles/main.dir/main.c.o: /home/Misha/display_1.8/Pico_code/c/main.c \
  /usr/arm-none-eabi/include/machine/_types.h \
  /usr/arm-none-eabi/include/sys/lock.h \
  /usr/arm-none-eabi/include/sys/stdio.h \
- /home/Misha/display_1.8/Pico_code/c/./lib/GUI/../Fonts/fonts.h \
  /home/Misha/display_1.8/Pico_code/c/./lib/LCD/LCD_1in8.h \
  /usr/arm-none-eabi/include/stdlib.h \
  /usr/arm-none-eabi/include/machine/stdlib.h \
@@ -91,15 +91,37 @@ CMakeFiles/main.dir/main.c.o: /home/Misha/display_1.8/Pico_code/c/main.c \
  /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
  /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
  /home/Misha/display_1.8/Pico_code/c/helper_functions.c \
- /home/Misha/display_1.8/Pico_code/c/nxjson.c \
- /usr/arm-none-eabi/include/errno.h \
- /usr/arm-none-eabi/include/sys/errno.h \
- /usr/arm-none-eabi/include/string.h \
- /usr/arm-none-eabi/include/sys/_locale.h \
- /usr/arm-none-eabi/include/strings.h \
- /usr/arm-none-eabi/include/sys/string.h \
- /home/Misha/display_1.8/Pico_code/c/nxjson.h \
  /home/Misha/display_1.8/Pico_code/c/icons.c \
+ /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.h \
+ /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+ /usr/arm-none-eabi/include/inttypes.h \
+ /usr/arm-none-eabi/include/sys/_locale.h \
+ /usr/arm-none-eabi/include/string.h /usr/arm-none-eabi/include/strings.h \
+ /usr/arm-none-eabi/include/sys/string.h \
+ /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/tusb_option.h \
+ /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+ /home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
+ /home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+ /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+ /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+ /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
+ /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
+ /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
+ /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/osal/osal.h \
+ /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+ /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
+ /home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/include/pico/sem.h \
+ /home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
+ /home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
+ /home/Misha/pico_sdk/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
+ /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+ /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/osal/osal.h \
+ /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+ /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.h \
+ /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
+ /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
+ /home/Misha/pico_sdk/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.h \
+ /usr/arm-none-eabi/include/math.h \
  /home/Misha/pico_sdk/pico-sdk/lib/lwip/src/include/lwip/apps/http_client.h \
  /home/Misha/pico_sdk/pico-sdk/lib/lwip/src/include/lwip/opt.h \
  /home/Misha/display_1.8/Pico_code/c/lwipopts.h \
@@ -122,7 +144,6 @@ CMakeFiles/main.dir/main.c.o: /home/Misha/display_1.8/Pico_code/c/main.c \
  /usr/arm-none-eabi/include/machine/time.h \
  /usr/arm-none-eabi/include/machine/_time.h \
  /home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_rand/include/pico/rand.h \
- /usr/arm-none-eabi/include/inttypes.h \
  /usr/lib/gcc/arm-none-eabi/14.2.0/include/limits.h \
  /usr/lib/gcc/arm-none-eabi/14.2.0/include/syslimits.h \
  /usr/arm-none-eabi/include/limits.h \

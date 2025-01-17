@@ -11,16 +11,6 @@ lib/Fonts/CMakeFiles/Fonts.dir/font12.c.o: /home/Misha/display_1.8/Pico_code/c/l
   /usr/arm-none-eabi/include/sys/features.h \
   /usr/lib/gcc/arm-none-eabi/14.2.0/include/stdint.h
 
-lib/Fonts/CMakeFiles/Fonts.dir/font12CN.c.o: /home/Misha/display_1.8/Pico_code/c/lib/Fonts/font12CN.c \
-  /home/Misha/display_1.8/Pico_code/c/lib/Fonts/fonts.h \
-  /usr/arm-none-eabi/include/_newlib_version.h \
-  /usr/arm-none-eabi/include/machine/_default_types.h \
-  /usr/arm-none-eabi/include/stdint.h \
-  /usr/arm-none-eabi/include/sys/_intsup.h \
-  /usr/arm-none-eabi/include/sys/_stdint.h \
-  /usr/arm-none-eabi/include/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/14.2.0/include/stdint.h
-
 lib/Fonts/CMakeFiles/Fonts.dir/font16.c.o: /home/Misha/display_1.8/Pico_code/c/lib/Fonts/font16.c \
   /home/Misha/display_1.8/Pico_code/c/lib/Fonts/fonts.h \
   /usr/arm-none-eabi/include/_newlib_version.h \
@@ -51,16 +41,6 @@ lib/Fonts/CMakeFiles/Fonts.dir/font24.c.o: /home/Misha/display_1.8/Pico_code/c/l
   /usr/arm-none-eabi/include/sys/features.h \
   /usr/lib/gcc/arm-none-eabi/14.2.0/include/stdint.h
 
-lib/Fonts/CMakeFiles/Fonts.dir/font24CN.c.o: /home/Misha/display_1.8/Pico_code/c/lib/Fonts/font24CN.c \
-  /home/Misha/display_1.8/Pico_code/c/lib/Fonts/fonts.h \
-  /usr/arm-none-eabi/include/_newlib_version.h \
-  /usr/arm-none-eabi/include/machine/_default_types.h \
-  /usr/arm-none-eabi/include/stdint.h \
-  /usr/arm-none-eabi/include/sys/_intsup.h \
-  /usr/arm-none-eabi/include/sys/_stdint.h \
-  /usr/arm-none-eabi/include/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/14.2.0/include/stdint.h
-
 lib/Fonts/CMakeFiles/Fonts.dir/font8.c.o: /home/Misha/display_1.8/Pico_code/c/lib/Fonts/font8.c \
   /home/Misha/display_1.8/Pico_code/c/lib/Fonts/fonts.h \
   /usr/arm-none-eabi/include/_newlib_version.h \
@@ -72,32 +52,28 @@ lib/Fonts/CMakeFiles/Fonts.dir/font8.c.o: /home/Misha/display_1.8/Pico_code/c/li
   /usr/lib/gcc/arm-none-eabi/14.2.0/include/stdint.h
 
 
-/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font8.c:
-
-/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font20.c:
-
-/usr/arm-none-eabi/include/machine/_default_types.h:
-
-/usr/arm-none-eabi/include/stdint.h:
-
-/usr/arm-none-eabi/include/sys/_stdint.h:
-
-/home/Misha/display_1.8/Pico_code/c/lib/Fonts/fonts.h:
-
-/usr/arm-none-eabi/include/sys/features.h:
-
-/usr/lib/gcc/arm-none-eabi/14.2.0/include/stdint.h:
-
-/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font24CN.c:
-
-/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font12CN.c:
-
-/usr/arm-none-eabi/include/_newlib_version.h:
+/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font24.c:
 
 /home/Misha/display_1.8/Pico_code/c/lib/Fonts/font16.c:
 
-/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font12.c:
+/usr/lib/gcc/arm-none-eabi/14.2.0/include/stdint.h:
+
+/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font8.c:
+
+/usr/arm-none-eabi/include/sys/_stdint.h:
+
+/usr/arm-none-eabi/include/stdint.h:
+
+/usr/arm-none-eabi/include/sys/features.h:
+
+/usr/arm-none-eabi/include/machine/_default_types.h:
+
+/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font20.c:
 
 /usr/arm-none-eabi/include/sys/_intsup.h:
 
-/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font24.c:
+/usr/arm-none-eabi/include/_newlib_version.h:
+
+/home/Misha/display_1.8/Pico_code/c/lib/Fonts/fonts.h:
+
+/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font12.c:

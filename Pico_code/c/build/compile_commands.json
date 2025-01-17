@@ -2257,12 +2257,6 @@
 },
 {
   "directory": "/home/Misha/display_1.8/Pico_code/c/build/lib/Fonts",
-  "command": "/usr/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb -g -O3 -DNDEBUG -o CMakeFiles/Fonts.dir/font12CN.c.o -c /home/Misha/display_1.8/Pico_code/c/lib/Fonts/font12CN.c",
-  "file": "/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font12CN.c",
-  "output": "lib/Fonts/CMakeFiles/Fonts.dir/font12CN.c.o"
-},
-{
-  "directory": "/home/Misha/display_1.8/Pico_code/c/build/lib/Fonts",
   "command": "/usr/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb -g -O3 -DNDEBUG -o CMakeFiles/Fonts.dir/font16.c.o -c /home/Misha/display_1.8/Pico_code/c/lib/Fonts/font16.c",
   "file": "/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font16.c",
   "output": "lib/Fonts/CMakeFiles/Fonts.dir/font16.c.o"
@@ -2278,12 +2272,6 @@
   "command": "/usr/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb -g -O3 -DNDEBUG -o CMakeFiles/Fonts.dir/font24.c.o -c /home/Misha/display_1.8/Pico_code/c/lib/Fonts/font24.c",
   "file": "/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font24.c",
   "output": "lib/Fonts/CMakeFiles/Fonts.dir/font24.c.o"
-},
-{
-  "directory": "/home/Misha/display_1.8/Pico_code/c/build/lib/Fonts",
-  "command": "/usr/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb -g -O3 -DNDEBUG -o CMakeFiles/Fonts.dir/font24CN.c.o -c /home/Misha/display_1.8/Pico_code/c/lib/Fonts/font24CN.c",
-  "file": "/home/Misha/display_1.8/Pico_code/c/lib/Fonts/font24CN.c",
-  "output": "lib/Fonts/CMakeFiles/Fonts.dir/font24CN.c.o"
 },
 {
   "directory": "/home/Misha/display_1.8/Pico_code/c/build/lib/Fonts",

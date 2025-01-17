@@ -8,7 +8,6 @@
 #include "hardware/sync.h"
 #include "hardware/uart.h"
 #include "helper_functions.c"
-#include "icons.c"
 #include "lwip/apps/http_client.h"
 #include "lwipopts.h"
 #include "ntp_time.c"
@@ -29,14 +28,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define STB_IMAGE_IMPLEMENTATION
-#define PIXEL_COUNT 61440 // number of pixels on the display
-#define time_api                                                               \
-  "https://api.ipgeolocation.io/"                                              \
-  "timezone?apiKey=479c261c6f4a4cc5b022e3351058718b&tz=Europe/Amsterdam"
-#define weather_api_key                                                        \
-  "http://api.openweathermap.org/data/2.5/"                                    \
-  "weather?q=Enschede&appid=1abe25c0ccddb9a35b2931cf9090a3b3&units=metric"
 #define PAGE_SIZE 256
 #define NVS_SIZE 4096
 #define FLASH_WRITE_START (PICO_FLASH_SIZE_BYTES - NVS_SIZE)
@@ -51,10 +42,10 @@ char *arrs[] = {arr_1,  arr_2,  arr_3,  arr_4,  arr_5,  arr_6,  arr_7,
                 arr_8,  arr_9,  arr_10, arr_11, arr_12, arr_13, arr_14,
                 arr_15, arr_16, arr_17, arr_18, arr_19, arr_20, arr_21,
                 arr_22, arr_23, arr_24, arr_25, arr_26, arr_27};
-char icon[10];
+char icon[10], temperature[10], curr_time[10];
+sFONT *curr_font = &Font16;
+char input_buffer[1024];
 
-char temperature[10] = {0};
-char curr_time[10] = {0};
 int main(void) {
   stdio_init_all();
   // setting up wifi_name and password
@@ -65,12 +56,6 @@ int main(void) {
     printf("Connected to wifi\n");
   }
 
-  httpc_connection_t settings;
-  uint16_t port = 80;
-  settings.result_fn = result;
-  settings.headers_done_fn = headers;
-
-  // Initializing the display
   DEV_Delay_ms(100);
   if (DEV_Module_Init() != 0) {
     printf("Display could not be initialized\n");
@@ -90,6 +75,10 @@ int main(void) {
   Paint_SetScale(65);
   Paint_Clear(WHITE);
   Paint_SetRotate(ROTATE_0);
+  httpc_connection_t settings;
+  uint16_t port = 80;
+  settings.result_fn = result;
+  settings.headers_done_fn = headers;
 
   int photoIndx = 0;
 
@@ -123,13 +112,11 @@ int main(void) {
     }
     if (errWeather == ERR_OK && strlen(weatherBuffer) > 1) {
       get_temp_from_json(myBuff, temperature);
+      get_icon_from_json(weatherBuffer, icon);
       errWeather = ERR_VAL;
     }
-    // TODO: logic for time
     uint32_t nextTime = prevTime + delayTime;
-
     if (firstTime || to_ms_since_boot(get_absolute_time()) >= nextTime) {
-
       errTime = httpc_get_file_dns(
           "api.ipgeolocation.io", 80,
           "/timezone?apiKey=790488a8a8fa4fc18ca63bd7064f1d41&"
@@ -142,15 +129,17 @@ int main(void) {
       get_time_from_json(timeBuffer);
       errTime = ERR_VAL;
     }
+
+    // Get current time
     struct tm time_info;
     time_t current_time;
 
-    // Get current time
     time(&current_time);
     localtime_r(&current_time, &time_info);
-    printf("Current time: %d-%d-%d %d:%d:%d\n", time_info.tm_year + 1900,
-           time_info.tm_mon + 1, time_info.tm_mday, time_info.tm_hour,
-           time_info.tm_min, time_info.tm_sec);
+    /*printf("Current time: %d-%d-%d %d:%d:%d\n", time_info.tm_year + 1900,*/
+    /*       time_info.tm_mon + 1, time_info.tm_mday, time_info.tm_hour,*/
+    /*       time_info.tm_min, time_info.tm_sec);*/
+    // TODO: make a func for it
     if (time_info.tm_hour >= 10 && time_info.tm_min >= 10) {
       sprintf(curr_time, "%d:%d", time_info.tm_hour, time_info.tm_min);
     }
@@ -163,31 +152,29 @@ int main(void) {
     if (time_info.tm_hour < 10 && time_info.tm_min < 10) {
       sprintf(curr_time, "0%d:0%d", time_info.tm_hour, time_info.tm_min);
     }
-    // TODO: logic for icons
-    /*  get_curr_icon(myBuff, icon);*/
-    // TODO:
-    // convert all images to hex and store them in a file
-    // based on the curr icon fetched from the weather api
-    // display the image on the screen
-    // UPD:
-    // almost done, need to convert to diff resolutions
-    // for diff formats of displaying data
 
-    Paint_DrawImage(arrs[photoIndx++], 0, 1, 160, 128);
+    Paint_DrawImage(arrs[photoIndx++], 0, 1, 160, 128, false);
     if (photoIndx == 26)
       photoIndx = 0;
-
-    if (temperature != NULL && strlen(temperature) > 0) {
-      Paint_DrawString_EN(13, 1, temperature, &Font16, WHITE, BLACK);
+    if (strlen(temperature) > 0) {
+      Paint_DrawString_EN(13, 1, temperature, curr_font, WHITE, CLEAR);
     }
-    if (curr_time != NULL && strlen(curr_time) > 0) {
-      // for bigger font(16)
-      Paint_DrawString_EN(105, 1, curr_time, &Font16, WHITE, BLACK);
+    if (strlen(curr_time) > 0) {
+      Paint_DrawString_EN(105, 1, curr_time, curr_font, WHITE, CLEAR);
     }
     Paint_DrawCircle(25, 4, 2, WHITE, DOT_PIXEL_1X1, DRAW_FILL_EMPTY);
-    Paint_DrawImage(d01, 0, 1, 14, 14);
+    if (strlen(icon) > 0) {
+      for (int i = 0; i < sizeof(icon_map) / sizeof(icon_map[0]); i++) {
+        if (strcmp(icon, icon_map[i].icon) == 0) {
+          Paint_DrawImage(icon_map[i].img, 1, 1, 13, 13, true);
+        }
+      }
+    }
     LCD_1IN8_Display(BlackImage);
     /*DEV_Delay_ms(10);*/
+    /*read_from_stdin(input_buffer, 1024);*/
+    /*if (strlen(input_buffer) > 0)*/
+    /*  Paint_DrawString_EN(50, 50, input_buffer, curr_font, WHITE, CLEAR);*/
   }
   free(BlackImage);
   BlackImage = NULL;
