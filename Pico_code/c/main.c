@@ -12,7 +12,6 @@
 #include "helper_functions.c"
 #include "lwip/apps/http_client.h"
 #include "lwipopts.h"
-#include "ntp_time.c"
 #include "pico/cyw43_arch.h"
 #include "pico/time.h"
 #include "pico_clock.c"
@@ -48,7 +47,7 @@ char input_buffer[1024];
 
 int main(void) {
   stdio_init_all();
-  set_sys_clock_khz(240000, true);
+  set_sys_clock_khz(190000, true);
   // setting up wifi_name and password
   set_name_pass(ssid, pass);
   // setting up the wifi and connecting to it
@@ -87,15 +86,15 @@ int main(void) {
   // to fetch the data about the weather, time
   uint32_t prevWeather = to_ms_since_boot(get_absolute_time()),
            prevTime = to_ms_since_boot(get_absolute_time());
-  // sync time every hour
-  // fetch weather every 30 minutes
-  uint32_t delayWeather = 900000, delayTime = 3600000;
+  uint32_t delayWeather = 450000, delayTime = 3600000;
   // to check the state of the request
   err_t errWeather, errTime;
   datetime_t datetime;
   // send a request after initialization
   bool firstTime = true, firstWeather = true;
 
+  struct tm time_info;
+  time_t current_time;
   while (true) {
     // check whether the delay time has passed
     // so that new request should be sent
@@ -114,6 +113,7 @@ int main(void) {
     if (errWeather == ERR_OK && strlen(weatherBuffer) > 1) {
       get_temp_from_json(myBuff, temperature);
       get_icon_from_json(weatherBuffer, icon);
+      weatherBuffer[0] = '\0';
       errWeather = ERR_VAL;
     }
     uint32_t nextTime = prevTime + delayTime;
@@ -128,31 +128,15 @@ int main(void) {
     }
     if (errTime == ERR_OK && strlen(timeBuffer) > 1) {
       get_time_from_json(timeBuffer);
+      timeBuffer[0] = '\0';
       errTime = ERR_VAL;
     }
 
     // Get current time
-    struct tm time_info;
-    time_t current_time;
 
     time(&current_time);
     localtime_r(&current_time, &time_info);
-    /*printf("Current time: %d-%d-%d %d:%d:%d\n", time_info.tm_year + 1900,*/
-    /*       time_info.tm_mon + 1, time_info.tm_mday, time_info.tm_hour,*/
-    /*       time_info.tm_min, time_info.tm_sec);*/
-    // TODO: make a func for it
-    if (time_info.tm_hour >= 10 && time_info.tm_min >= 10) {
-      sprintf(curr_time, "%d:%d", time_info.tm_hour, time_info.tm_min);
-    }
-    if (time_info.tm_hour < 10) {
-      sprintf(curr_time, "0%d:%d", time_info.tm_hour, time_info.tm_min);
-    }
-    if (time_info.tm_min < 10) {
-      sprintf(curr_time, "%d:0%d", time_info.tm_hour, time_info.tm_min);
-    }
-    if (time_info.tm_hour < 10 && time_info.tm_min < 10) {
-      sprintf(curr_time, "0%d:0%d", time_info.tm_hour, time_info.tm_min);
-    }
+    sprintf(curr_time, "%02d:%02d", time_info.tm_hour, time_info.tm_min);
 
     Paint_DrawImage(arrs[photoIndx++], 0, 1, 160, 128, false);
     if (photoIndx == 26)
@@ -162,7 +146,7 @@ int main(void) {
       // TODO: implement for other font sizes
 
       if (curr_font == &Font16) {
-        Paint_DrawCircle(13 + (strlen(temperature) * 12), 4, 2, WHITE,
+        Paint_DrawCircle(13 + (strlen(temperature) * 12) + 1, 4, 2, WHITE,
                          DOT_PIXEL_1X1, DRAW_FILL_EMPTY);
       }
     }
@@ -177,9 +161,6 @@ int main(void) {
         }
       }
     }
-
-    read_from_stdin(input_buffer, 1024);
-    Paint_DrawString_EN(50, 50, input_buffer, curr_font, RED, BLACK);
     LCD_1IN8_Display(BlackImage);
     /*DEV_Delay_ms(10);*/
   }

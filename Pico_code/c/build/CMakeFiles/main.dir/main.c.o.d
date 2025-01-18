@@ -181,7 +181,6 @@ CMakeFiles/main.dir/main.c.o: /home/Misha/display_1.8/Pico_code/c/main.c \
  /home/Misha/pico_sdk/pico-sdk/lib/lwip/src/include/lwip/prot/icmp.h \
  /home/Misha/pico_sdk/pico-sdk/lib/lwip/src/include/lwip/prot/iana.h \
  /home/Misha/display_1.8/Pico_code/c/lwipopts.h \
- /home/Misha/display_1.8/Pico_code/c/ntp_time.c \
  /home/Misha/pico_sdk/pico-sdk/src/rp2_common/pico_cyw43_arch/include/pico/cyw43_arch.h \
  /home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43.h \
  /home/Misha/pico_sdk/pico-sdk/lib/cyw43-driver/src/cyw43_config.h \

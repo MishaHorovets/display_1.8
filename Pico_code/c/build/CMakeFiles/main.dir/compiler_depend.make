@@ -12262,7 +12262,6 @@ CMakeFiles/main.dir/main.c.o: /home/Misha/display_1.8/Pico_code/c/main.c \
   /home/Misha/display_1.8/Pico_code/c/helper_functions.c \
   /home/Misha/display_1.8/Pico_code/c/icons.c \
   /home/Misha/display_1.8/Pico_code/c/lwipopts.h \
-  /home/Misha/display_1.8/Pico_code/c/ntp_time.c \
   /home/Misha/display_1.8/Pico_code/c/pico_clock.c \
   /home/Misha/display_1.8/Pico_code/c/wifi_setup.c \
   /home/Misha/display_1.8/Pico_code/c/wifi_setup.h \
@@ -13385,8 +13384,6 @@ generated/pico_base/pico/version.h:
 /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_ticks/ticks.c:
 
 /home/Misha/pico_sdk/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c:
-
-/home/Misha/display_1.8/Pico_code/c/ntp_time.c:
 
 /home/Misha/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c:
 
